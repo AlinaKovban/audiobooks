@@ -30,8 +30,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django_extensions',
     'phonenumber_field',
+    'crispy_forms',
     'account',
-    'content',
+    'audiobooks',
 ]
 
 MIDDLEWARE = [
@@ -51,7 +52,7 @@ AUTH_USER_MODEL = "account.User"
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -100,6 +101,9 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
+
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 
 # Default primary key field type
